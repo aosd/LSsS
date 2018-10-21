@@ -8,7 +8,9 @@ client.on('message', msg => {
 });
 
 
-client.user.setGame(`24 Hours,AFK`)
+client.on('ready', () => {
+    setActivty('Majd #TrixMC', 'https://twich.tv/idk');
+});
 
 
 
