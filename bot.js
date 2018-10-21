@@ -3,8 +3,10 @@ const client = new Discord.Client();
 
 
 
-client.on('ready', () => {
-    setActivty('Majd #TrixMC', 'https://twich.tv/idk');
+client.on('ready', () => { 
+  console.log(`Loggen in As ${client.user.username}`)
+ client.user.setGame(`#Majd,TrixMC ${client.guilds.size} Guild's`, "https://twitch.tv/TrixMC")
+ client.user.setStatus(`Idle`)
 });
 
 
