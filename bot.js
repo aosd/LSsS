@@ -3,7 +3,6 @@ const client = new Discord.Client();
 
 const devs = ['440481882799603717'];
 const adminprefix = "-";
-client.on("error", console.error)
 client.on('message', message => {
   
     var argresult = message.content.split(` `).slice(1).join(' ');
@@ -28,6 +27,10 @@ client.on('message', message => {
   });
 
 
+
+client.on("error", function() {
+return console.log(arguments[0])
+});
 
 
 client.login(process.env.BOT_TOKEN);
